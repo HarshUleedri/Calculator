@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HU || Calculator</title>
+  <link rel="shortcut icon" href="images/favicon_io/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="loader">
+      <span>C</span>
+      <span>a</span>
+      <span>l</span>
+      <span>c</span>
+      <span>u</span>
+      <span>l</span>
+      <span>a</span>
+      <span>t</span>
+      <span>o</span>
+      <span>r</span>
+    </div>
+    <div class="cursor">
+
+    </div>
+    <div class="moving_shape">
+
+    </div>
+    <div class="copy_right">
+      <a href="#"> ©️2024 by Harsh Uleedri</a>
+     
+    </div>
+    <div class="calculator_content" data-tilt>
+      <div class="display">
+        <p class="input_display">
+
+        </p>
+
+      </div>
+      <div class="calc_buttons">
+        <div class="calc_button_1_row">
+          <h1> HU </h1>
+          <button onclick="calculation = ''; document.querySelector('.input_display').innerText = '';">
+            clear
+          </button>
+
+          <button onclick="updatecalculation(' * ')">
+            *
+          </button>
+        </div>
+
+        <div class="calc_button_2_row">
+          <button onclick=" updatecalculation(7) ">
+            7
+          </button>
+          <button onclick=" updatecalculation(8)">
+            8
+          </button>
+          <button onclick=" updatecalculation(9)  ">
+            9
+          </button>
+          <button onclick=" updatecalculation(' / ') ">
+            /
+          </button>
+
+        </div>
+        <div class="calc_button_3_row">
+          <button onclick=" updatecalculation(4)  ">
+            4
+          </button>
+          <button onclick=" updatecalculation(5) ">
+            5
+          </button>
+          <button onclick=" updatecalculation(6)">
+            6
+          </button>
+          <button onclick="updatecalculation(' + ')">
+            +
+          </button>
+
+        </div>
+        <div class="calc_button_4_row">
+          <button onclick=" updatecalculation(1)  ">
+            1
+          </button>
+          <button onclick=" updatecalculation(2) ">
+            2
+          </button>
+          <button onclick=" updatecalculation(3)">
+            3
+          </button>
+          <button onclick="updatecalculation(' - ')">
+            -
+          </button>
+        </div>
+        <div class="calc_button_5_row">
+          <button onclick=" updatecalculation(0) ">
+            0
+          </button>
+
+
+          <button onclick="goBack()">
+            Backspace
+          </button>
+
+          <button onclick="  if (calculation) {
+              calculation = eval(calculation);
+              document.querySelector('.input_display').innerText = calculation;
+              localStorage.setItem('calculation', calculation);
+            } else {
+              document.querySelector('.input_display').innerText = '';
+            }">
+            =
+          </button>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"
+    integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
